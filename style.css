@@ -1,0 +1,170 @@
+/* ========================================================
+   AYAKA MOTION - Activation Console Stylesheet (style.css)
+   ======================================================== */
+
+body {
+    background-color: #fef08a; /* Tailwind yellow-200 */
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 2px, transparent 2px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 2px, transparent 2px);
+    background-size: 24px 24px;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Neo-Brutalism Cards & Components */
+.neo-card {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 16px;
+}
+
+.neo-card-yellow {
+    background-color: #facc15;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 16px;
+}
+
+.neo-card-dark {
+    background-color: #18181b;
+    color: #ffffff;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 16px;
+}
+
+.neo-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 12px;
+    font-weight: 800;
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+.neo-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000000;
+}
+
+.neo-btn-yellow {
+    background-color: #facc15;
+    color: #000000;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 12px;
+    font-weight: 800;
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+.neo-btn-yellow:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000000;
+}
+
+.neo-btn-dark {
+    background-color: #18181b;
+    color: #ffffff;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 12px;
+    font-weight: 800;
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+.neo-btn-dark:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000000;
+}
+
+.neo-input {
+    background-color: #f4f4f5;
+    border: 3px solid #000000;
+    border-radius: 12px;
+    color: #000000;
+    font-weight: 600;
+}
+.neo-input:focus {
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 3px 3px 0px #000000;
+}
+
+.bottom-nav {
+    background-color: #ffffff;
+    border-top: 3px solid #000000;
+    box-shadow: 0px -4px 0px #000000;
+}
+
+@keyframes floatPlanet {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(8deg); }
+}
+
+@keyframes orbitPlanet {
+    0% { transform: rotate(0deg) translateX(15px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(15px) rotate(-360deg); }
+}
+
+@keyframes flyRocket {
+    0% { transform: translate(-40px, 40px) rotate(-15deg); opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { transform: translate(320px, -320px) rotate(-15deg); opacity: 0; }
+}
+
+@keyframes flyUfo {
+    0% { transform: translate(-60px, 100px) rotate(-10deg); opacity: 0; }
+    20% { opacity: 1; transform: translate(80px, 40px) rotate(5deg); }
+    50% { transform: translate(180px, 80px) rotate(-5deg); }
+    80% { opacity: 1; transform: translate(280px, 20px) rotate(10deg); }
+    100% { transform: translate(380px, -60px) rotate(-10deg); opacity: 0; }
+}
+
+@keyframes hoverUfo {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes shootMeteor {
+    0% { transform: translate(150px, -100px) scale(0.5); opacity: 0; }
+    20% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { transform: translate(-250px, 300px) scale(1.2); opacity: 0; }
+}
+
+@keyframes floatCloud {
+    0% { transform: translateX(-50px); }
+    50% { transform: translateX(50px); }
+    100% { transform: translateX(-50px); }
+}
+
+@keyframes rainCloud {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.05); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(250, 204, 21, 0.4)); }
+    50% { filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.9)); }
+}
+
+.anim-planet { animation: floatPlanet 6s ease-in-out infinite; }
+.anim-planet-orbit { animation: orbitPlanet 12s linear infinite; }
+.anim-rocket { animation: flyRocket 9s linear infinite; }
+.anim-ufo { animation: flyUfo 11s ease-in-out infinite; }
+.anim-ufo-hover { animation: hoverUfo 3s ease-in-out infinite; }
+.anim-meteor-1 { animation: shootMeteor 5s ease-in-out infinite 1s; }
+.anim-meteor-2 { animation: shootMeteor 7s ease-in-out infinite 3.5s; }
+.anim-cloud { animation: floatCloud 8s ease-in-out infinite; }
+.anim-rain-cloud { animation: rainCloud 4s ease-in-out infinite; }
+.anim-glow { animation: pulseGlow 3s ease-in-out infinite; }
+
+.emoji-float { display: inline-block; font-size: 2.5rem; filter: drop-shadow(3px 3px 0px #000); }
+.emoji-planet { display: inline-block; font-size: 3rem; filter: drop-shadow(3px 3px 0px #000); }
+.emoji-meteor { display: inline-block; font-size: 1.8rem; filter: drop-shadow(2px 2px 0px #000); }
+.emoji-cloud { display: inline-block; font-size: 2.5rem; filter: drop-shadow(2px 2px 0px #000); }
